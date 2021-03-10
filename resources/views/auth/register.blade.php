@@ -53,6 +53,9 @@
                             </div>
                         </div>
 
+                        
+                        
+
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -61,6 +64,22 @@
                             </div>
                             <div class="col-md-6">
                                 <input  type="hidden" class="form-control" name="roll_id" value="2">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Adress</label>
+
+                            <div class="col-md-6">
+                                <textarea  type="textarea" class="form-control " name="adress" required ></textarea>       
+                              
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">phoneNo</label>
+
+                            <div class="col-md-6">
+                                <input  type="number" class="form-control " name="phone_no" required />    
+                              
                             </div>
                         </div>
 

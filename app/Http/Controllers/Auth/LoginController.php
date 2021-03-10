@@ -60,6 +60,8 @@ class LoginController extends Controller
         foreach ($cart as $post) {
             $post->delete();
         }
+
+        
         $this->guard()->logout();
 
         $request->session()->invalidate();

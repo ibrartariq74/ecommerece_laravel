@@ -76,7 +76,18 @@ route::resource('order',OrderController::class)->middleware('can:isAdmin');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/blog', function(){
+    return view('frontend.blog');
 
+})->name('blog');
+Route::get('/about', function(){
+    return view('frontend.about');
+
+})->name('about');
+Route::get('/contact', function(){
+    return view('frontend.contact');
+
+})->name('contact');
 Route::get('/filter/{min}/{max}', [App\Http\Controllers\HomeController::class, 'filter'])->name('filter');
 
 

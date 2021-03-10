@@ -14,7 +14,7 @@
           
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link active">
+              <a href="{{url('/admin')}}" class="nav-link active">
                 
                 <i class="fa fa-home nav-icon " aria-hidden="true"></i>
                 <p>Dashboard</p>

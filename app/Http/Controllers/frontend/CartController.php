@@ -101,6 +101,7 @@ class CartController extends Controller
        $order= new Order();
        $order->user_id=$userid;
        $order->product_id=$id;
+       $order->status="pending";
        $order->save();
            
 

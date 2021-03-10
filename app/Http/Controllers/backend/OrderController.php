@@ -59,9 +59,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(order  $order)
     {
-        //
+        
+        return view ('backend.order.edit', compact('order'));
     }
 
     /**
@@ -71,9 +72,14 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, order $order)
     {
-        //
+     
+        $order->status=$request->status;
+       $order->save();
+       $products = Order::with('Product','User')->get();
+       return view ('backend.order.index',compact('products'));
+       
     }
 
     /**

@@ -28,8 +28,8 @@
 
 
     
-    
-    
+
+
 
 
     
@@ -44,34 +44,54 @@
         <th>Id</th>
         <th>productName</th>
         <th>customerName</th>
-       
+        <th>customer adress</th>
+        <th>customer email</th>
+        <th>customer phone_no</th>
+        <th>status</th>
       </tr>
     </thead>
     <tbody>
     @foreach($products as $product)
+    <!-- /.MODAL-->
+    
+
+           
     <tr>
+    
       <td>{{$product->id}}</td>
       <td>{{$product->product->name}}</td>
       <td>{{$product->user->name}}</td>
+      <td>{{$product->user->adress}}</td>
+      <td>{{$product->user->email}}</td>
+      <td>{{$product->user->phone_no}}</td>
+      <td>{{$product->status}}</td>
+ 
+    
+      <td> 
+      <a class="btn btn-info" href="{{  route('order.edit',$product->id) }}" > EDIT </a> 
       
+    
+      </td>
+
+      </form>
      
 
     </tr>
+  
+   
+   
+
     @endforeach
-   
-   
-
-
 
 
     </tbody>
     
     
   </table>
-  </div>
 
-           
-  
+
+      
+
 
 
     
@@ -79,5 +99,10 @@
     
   </div>
   
+
+
+         
+    
+    
 
 @endsection
