@@ -32,7 +32,7 @@
 				</div>
 
 
-				<div class="item-slick1" style="background-image: url(images/slide-001.png);">
+				<div class="item-slick1" style="background-image: url('public/images/slide-001.png');">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
@@ -57,7 +57,7 @@
 				</div>
 
 
-				<div class="item-slick1" style="background-image: url(images/slide-01.png);">
+				<div class="item-slick1" style="background-image: url('public/images/slide-001.png');">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
@@ -85,7 +85,7 @@
 
 			
 
-				<div class="item-slick1" style="background-image: url(images/slide-03.png);">
+				<div class="item-slick1" style="background-image: url('public/images/slide-001.png');">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
@@ -111,4 +111,3 @@
 			</div>
 		</div>
 	</section>
-n

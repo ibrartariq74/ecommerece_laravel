@@ -4,9 +4,11 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\cart;
+use App\Models\Order;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Auth;
 
 class CartController extends Controller
 {
@@ -92,7 +94,18 @@ class CartController extends Controller
        $cart->price=$product->price;
        $cart->total_price=$totalprice;
        $cart->save();
+
+
+       // adding oder in oder table with user id 
+        $userid=Auth::id();
+       $order= new Order();
+       $order->user_id=$userid;
+       $order->product_id=$id;
+       $order->save();
            
+
+
+
          // calculating total bill
         $totalbill=cart::sum('total_price');
          

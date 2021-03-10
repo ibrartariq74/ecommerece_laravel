@@ -25,9 +25,22 @@ class HomeController extends Controller
      */
     public function index()
     {
+       // dd('$request');
         $categorys=Category::all();
         $products = product::with('Category')->get(); 
 
         return view('home',compact('categorys','products'  ) );
+    }
+    public function filter($min,$max)
+    {
+       
+        
+        
+        $categorys=Category::all();
+        $products = product::whereBetween('price', [$min, $max])->get(); 
+       
+      
+
+        return view('frontend.filter',compact('categorys','products'  ) );
     }
 }

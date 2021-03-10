@@ -34,14 +34,7 @@
       @csrf
       {{ method_field('PATCH') }}
 
-      <div class="form-group">
-          <label for="exampleInputEmail1">  Category</label>
-          <input type="text" class="form-control"disabled  name="category" value= "{{ $products->category->name }}" >
-
-        
-        
-          
-        </div>
+  
       <div class="form-group">
           <label for="exampleInputEmail1">product Name</label>
           <input type="text" class="form-control" disabled name="name" value= "{{ $products->name }}" >

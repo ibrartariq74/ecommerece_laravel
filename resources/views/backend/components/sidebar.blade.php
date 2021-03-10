@@ -76,7 +76,7 @@
           
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link ">
+                <a href="{{route('customer.index')}}" class="nav-link ">
                 <i class="fa fa-users nav-icon"></i>
                   <p>Customer</p>
                 </a>
@@ -90,7 +90,7 @@
           
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link ">
+              <a href="{{route('order.index')}}" class="nav-link ">
               <i class="fa fa-bus nav-icon " aria-hidden="true"></i>
                 <p>Orders</p>
               </a>
@@ -100,37 +100,8 @@
           </ul>
 
         </li>
-        <li class="nav-item has-treeview menu-open "  >
-          
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="" class="nav-link ">
-              
-              <i class="fa fa-camera-retro nav-icon " aria-hidden="true"></i> 
-                <p>Carousal</p>
-              </a>
-            </li>
-            
-            
-          </ul>
-
-        </li>
-        <li class="nav-item has-treeview menu-open "  >
-          
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="" class="nav-link ">
-              
-              <i class="fa fa-camera-retro nav-icon " aria-hidden="true"></i> 
-                <p>Trending</p>
-              </a>
-            </li>
-            
-            
-          </ul>
-
-        </li>
-          
+      
+       
        
         </ul>
       </nav>

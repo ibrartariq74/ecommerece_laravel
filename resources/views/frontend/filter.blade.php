@@ -1,3 +1,17 @@
+@extends('layouts.app')
+
+
+
+@section('content')
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +45,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ url(' vendor/perfect-scrollbar/perfect-scrollbar.css') }}"> 
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href=" {{ url('css/util.css ') }}" >
+	<link rel="stylesheet" type="text/css" href=" {{ url('css/main.css  ') }}  ">
 <!--===============================================================================================-->
 
 
@@ -49,9 +63,6 @@
 </head>
 <body class="animsition">
 
-
-	
-	
 
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
@@ -138,55 +149,10 @@
 		</div>
 	</div>
 
-		
-@include('frontend.slider')
 
 	<!-- Banner -->
 
-	<div class="sec-banner bg0 p-t-80 p-b-50" >
 	
-		<div class="container" >
-		
-			<div class="row"   >
-			
-			@foreach($categorys as $category)
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto col-lg-4 " style="width: 18rem;" style=" background-color: yellow;" >
-				
-					<!-- Block1 -->
-					<div class="block1 wrap-pic-w" >
-						<img src="{{asset('category/' . $category->image  )}}"   alt="IMG-BANNER">
-
-						<a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
-							<div class="block1-txt-child1 flex-col-l">
-								<span class="block1-name ltext-102 trans-04 p-b-8">
-									<h8> {{$category->name}} </h8>
-								</span>
-
-								<span class="block1-info stext-102 trans-04">
-								<h8> {{$category->description}} </h8>
-								</span>
-							</div>
-
-							<div class="block1-txt-child2 p-b-4 trans-05">
-								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
-								</div>
-							</div>
-						</a>
-					</div>
-					
-				</div>
-				
-				@endforeach
-
-				
-
-				
-			</div>
-			
-		</div>
-		
-	</div>
 	
 
 
@@ -226,76 +192,10 @@
 					</button>
 				</div>
 
-				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
-						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
-						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Filter
-					</div>
-
-					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
-						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
-						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						Search
-					</div>
-				</div>
 				
-				<!-- Search product -->
-				<div class="dis-none panel-search w-full p-t-10 p-b-15">
-					<div class="bor8 dis-flex p-l-15">
-						<button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-							<i class="zmdi zmdi-search"></i>
-						</button>
-
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-					</div>	
-				</div>
-
-				<!-- Filter -->
-				<div class="dis-none panel-filter w-full p-t-10">
-					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
-						
-
-						<div class="filter-col2 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Price
-							</div>
-
-							<ul>
-							
-
-								<li class="p-b-6">
-									<a href="{{route('filter', ['min' => 100, 'max' => '150'])}}" class="filter-link stext-106 trans-04">
-										Rs100 - Rs500
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="{{route('filter', ['min' => 500, 'max' => '1000'])}}" class="filter-link stext-106 trans-04">
-										Rs500 - Rs1000
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="{{route('filter', ['min' => 1000, 'max' => '2000'])}}" class="filter-link stext-106 trans-04">
-										Rs1000 - Rs2000
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="{{route('filter', ['min' => 2000, 'max' => '30000'])}}" class="filter-link stext-106 trans-04">
-									Rs2000 - Rs3000
-									</a>
-								</li>
-
-							
-							</ul>
-						</div>
-
-
-						
-					</div>
-				</div>
+				
+				
+				
 			</div>
 
 
@@ -336,8 +236,8 @@
 
 							<div class="block2-txt-child2 flex-r p-t-3">
 								<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-									<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-									<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									<img class="icon-heart1 dis-block trans-04" src="/images/icons/icon-heart-01.png" alt="ICON">
+									<img class="icon-heart2 dis-block trans-04 ab-t-l" src="/images/icons/icon-heart-02.png" alt="ICON">
 								</a>
 							</div>
 						</div>
@@ -489,34 +389,7 @@
 					</form>
 				</div>
 			</div>
-<!-- 
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a>
 
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
-
-				<p class="stext-107 cl6 txt-center">
-				
-				</p>
-			</div> -->
 		</div>
 	</footer>
 
@@ -637,3 +510,6 @@
 
 </body>
 </html>
+
+
+@endsection
